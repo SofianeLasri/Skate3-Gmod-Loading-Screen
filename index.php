@@ -16,9 +16,9 @@ $json = json_decode(file_get_contents($api_url), true);
  // Configuration BDD //
 ///////////////////////
 $bddHost = 'localhost'; //Adresse du serveur MySQL
-$bddUser = 'loading-screen'; //Utilisateur
-$bddMdp = 'Pa020135*'; //Mot de passe
-$bddName = 'loading-screen'; //Nom de la base de donnée
+$bddUser = 'skate3-loading-screen'; //Utilisateur
+$bddMdp = 'password'; //Mot de passe
+$bddName = 'skate3-loading-screen'; //Nom de la base de donnée
 $bdd = new PDO("mysql:host=$bddHost;dbname=$bddName", $bddUser, $bddMdp);
 $bdd->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
 $bdd->exec("CREATE TABLE `loading-screen`.`players` ( `id` INT NOT NULL AUTO_INCREMENT , `steamid` BIGINT(255) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;");
